@@ -2,18 +2,21 @@ import streamlit as st
 import pandas as pd
 import math
 from pathlib import Path
+import altair as alt
 
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
-    page_title='GDP dashboard',
+    page_title='Incendios forestales en España',
     page_icon=':earth_americas:', # This is an emoji shortcode. Could be a URL too.
+    layout='wide', 
+    initial_sidebar_state='expanded'
 )
 
 # -----------------------------------------------------------------------------
 # Declare some useful functions.
 
 @st.cache_data
-def get_gdp_data():
+def get_incendios_data():
     """Grab GDP data from a CSV file.
 
     This uses caching to avoid having to read the file every time. If we were
@@ -22,42 +25,89 @@ def get_gdp_data():
     """
 
     # Instead of a CSV on disk, you could read from an HTTP endpoint here too.
-    DATA_FILENAME = Path(__file__).parent/'data/gdp_data.csv'
-    raw_gdp_df = pd.read_csv(DATA_FILENAME)
+    DATA_FILENAME = Path(__file__).parent/'data/incendios.csv'
+    df = pd.read_csv(DATA_FILENAME)
 
-    MIN_YEAR = 1960
-    MAX_YEAR = 2022
+    MIN_YEAR = 1961
+    MAX_YEAR = 2016
 
-    # The data above has columns like:
-    # - Country Name
-    # - Country Code
-    # - [Stuff I don't care about]
-    # - GDP for 1960
-    # - GDP for 1961
-    # - GDP for 1962
-    # - ...
-    # - GDP for 2022
-    #
-    # ...but I want this instead:
-    # - Country Name
-    # - Country Code
-    # - Year
-    # - GDP
-    #
-    # So let's pivot all those year-columns into two: Year and GDP
-    gdp_df = raw_gdp_df.melt(
-        ['Country Code'],
-        [str(x) for x in range(MIN_YEAR, MAX_YEAR + 1)],
-        'Year',
-        'GDP',
+    return df
+
+
+
+def fires_per_reg_barchart(input_df):
+    data = input_df.groupby(['comunidad', 'anio']).size().reset_index(name='total').sort_values(by='total', ascending=False)
+    data = data[(data.anio >= from_year) & (data.anio <= to_year)]
+
+    chart = alt.Chart(data).transform_aggregate(
+        total='sum(total)',
+        groupby=['comunidad']
+    ).mark_bar().encode(
+        x=alt.X('comunidad:N', sort='-y', title='Comunidad Autónoma', axis=alt.Axis(labelAngle=-30)),
+        y=alt.Y('total:Q', title='Número total de incendios'),
+        tooltip=['total']
+    ).properties(
+        width=800,
+        height=500,
+        title='Número total de incendios por Comunidad Autónoma'
+    )
+    return chart
+
+
+
+
+def fires_per_5year(input_df): 
+    data = input_df.loc[(incendios.anio >= 1970) & (incendios.anio <= 2014), :].groupby(['anio']).agg(
+        total=('perdidassuperficiales', 'sum'),
+        count=('perdidassuperficiales', 'size')
+    ).reset_index().sort_values(by='total', ascending=False)
+
+    data['rango_5_anios'] = data['anio'].apply(lambda x: f"{x - (x % 5)}-{x - (x % 5) + 4}")
+    data = data[(data.anio >= from_year) & (data.anio <= to_year)]
+
+
+    data_grouped = data.groupby('rango_5_anios').agg(
+        total=('total', 'sum'),
+        count=('count', 'sum')
+    ).reset_index().sort_values(by='rango_5_anios')
+
+
+    base = alt.Chart(data_grouped).encode(
+        x=alt.X('rango_5_anios:O', title='Rango de años')
     )
 
-    # Convert years from string to integers
-    gdp_df['Year'] = pd.to_numeric(gdp_df['Year'])
+    bar = base.mark_bar(color='#6BAED6').encode(
+        y=alt.Y('count:Q', title='Número de hectáreas quemadas')
+    )
 
-    return gdp_df
+    line = base.mark_line(color='purple', strokeWidth=3).encode(
+        y=alt.Y('total:Q', title='Número total de incendios')
+    )
 
-gdp_df = get_gdp_data()
+    chart = alt.layer(bar, line).resolve_scale(
+        y='independent'
+    ).properties(
+        width=800,
+        height=500,
+        title='Superficie total perdida y número de incendios por rango de 5 años'
+    )
+
+    return chart
+
+
+incendios = get_incendios_data()
+
+
+with st.sidebar: 
+    st.title("Filtros")
+    min_value = incendios['anio'].min()
+    max_value = incendios['anio'].max()
+
+    from_year, to_year = st.slider(
+        'Ano ',
+        min_value=min_value,
+        max_value=max_value,
+        value=[min_value, max_value])
 
 # -----------------------------------------------------------------------------
 # Draw the actual page
@@ -75,28 +125,14 @@ But it's otherwise a great (and did I mention _free_?) source of data.
 ''
 ''
 
-min_value = gdp_df['Year'].min()
-max_value = gdp_df['Year'].max()
 
-from_year, to_year = st.slider(
-    'Which years are you interested in?',
-    min_value=min_value,
-    max_value=max_value,
-    value=[min_value, max_value])
 
-countries = gdp_df['Country Code'].unique()
 
-if not len(countries):
-    st.warning("Select at least one country")
+st.altair_chart(fires_per_reg_barchart(incendios))
 
-selected_countries = st.multiselect(
-    'Which countries would you like to view?',
-    countries,
-    ['DEU', 'FRA', 'GBR', 'BRA', 'MEX', 'JPN'])
+st.altair_chart(fires_per_5year(incendios))
 
-''
-''
-''
+
 
 # Filter the data
 filtered_gdp_df = gdp_df[
