@@ -1,0 +1,565 @@
+,idcomunidad,comunidad_x,anio,total,count,comunidad_y,ndvi_mean
+0,3,Galicia,1989,198998.2,8243,Galicia,0.22870979
+1,9,Comunidad Valenciana,1994,138404.5,752,Comunitat Valenciana,0.08295267
+2,3,Galicia,1981,113716.9,5081,Galicia,0.2155555
+3,3,Galicia,1985,107357.2,4717,Galicia,0.22615063
+4,17,Castilla y Leon,1985,105726.3,2101,Castilla y León,0.13970074
+5,3,Galicia,2006,95947.38,6996,Galicia,0.25348002
+6,2,Cataluna,1994,76625.4,1220,Cataluña/Catalunya,0.12706411
+7,14,Extremadura,1985,71320.1,548,Extremadura,0.14295022
+8,17,Castilla y Leon,1989,71037.8,3286,Castilla y León,0.14122185
+9,2,Cataluna,1986,67252.5,579,Cataluña/Catalunya,0.116971485
+10,17,Castilla y Leon,2000,66610.61,2759,Castilla y León,0.1566957
+11,4,Andalucia,1991,65249.8,2109,Andalucía,0.12734573
+12,3,Galicia,1987,60550.4,3895,Galicia,0.22670144
+13,17,Castilla y Leon,1990,59241.1,2227,Castilla y León,0.15276259
+14,9,Comunidad Valenciana,2012,58994.159999999996,486,Comunitat Valenciana,0.091416955
+15,3,Galicia,2005,57452.22,11973,Galicia,0.25356397
+16,4,Andalucia,2004,51273.93,1055,Andalucía,0.13383363
+17,3,Galicia,1990,51227.1,4045,Galicia,0.23295628
+18,4,Andalucia,1985,51048.5,1007,Andalucía,0.112396374
+19,17,Castilla y Leon,1991,50061.8,1787,Castilla y León,0.14698897
+20,3,Galicia,1998,48997.61,13196,Galicia,0.2595714
+21,14,Extremadura,1991,46718.5,961,Extremadura,0.15626386
+22,3,Galicia,1995,46669.67,15254,Galicia,0.2516685
+23,17,Castilla y Leon,2005,46406.68,2986,Castilla y León,0.14940155
+24,3,Galicia,2000,45952.58,12589,Galicia,0.24077718
+25,9,Comunidad Valenciana,1991,44426.3,869,Comunitat Valenciana,0.08985717
+26,17,Castilla y Leon,1994,44114.8,2448,Castilla y León,0.15999289
+27,14,Extremadura,2003,43558.36,1307,Extremadura,0.17043363
+28,17,Castilla y Leon,2012,43557.35,2603,Castilla y León,0.16088058
+29,17,Castilla y Leon,1988,43204.6,1737,Castilla y León,0.16131476
+30,5,Principado de Asturias,1985,42403.5,968,Principado de Asturias,0.20000243
+31,3,Galicia,2011,42390.19,6342,Galicia,0.2583762
+32,17,Castilla y Leon,1986,41272.9,1504,Castilla y León,0.14006789
+33,11,Castilla La Mancha,1994,41005.0,706,Castilla-La Mancha,0.12047082
+34,5,Principado de Asturias,1989,40614.1,1782,Principado de Asturias,0.20484436
+35,14,Extremadura,1986,39405.9,426,Extremadura,0.15652092
+36,9,Comunidad Valenciana,1985,39382.9,523,Comunitat Valenciana,0.07133003
+37,3,Galicia,1984,38860.2,2921,Galicia,0.23148513
+38,3,Galicia,1988,38339.1,3889,Galicia,0.24377625
+39,4,Andalucia,1986,37669.9,853,Andalucía,0.118006885
+40,3,Galicia,1982,36265.3,2393,Galicia,0.22320753
+41,4,Andalucia,1994,36134.0,1671,Andalucía,0.125821
+42,17,Castilla y Leon,1995,34841.9,2081,Castilla y León,0.15485811
+43,17,Castilla y Leon,2003,32800.14,1607,Castilla y León,0.16645497
+44,17,Castilla y Leon,1987,32644.9,1048,Castilla y León,0.15519962
+45,3,Galicia,2004,32098.45,10618,Galicia,0.25863418
+46,10,Aragon,1994,31543.9,468,Aragón,0.12229341
+47,17,Castilla y Leon,1998,31410.12,2116,Castilla y León,0.16930221
+48,17,Castilla y Leon,2009,31057.62,2699,Castilla y León,0.15000163
+49,3,Galicia,1986,30975.0,2369,Galicia,0.22412543
+50,17,Castilla y Leon,1999,30654.93,2259,Castilla y León,0.16087388
+51,9,Comunidad Valenciana,1981,30297.1,707,Comunitat Valenciana,0.07871964
+52,17,Castilla y Leon,1981,29989.6,1120,Castilla y León,0.1304173
+53,3,Galicia,1997,28687.02,14317,Galicia,0.25234097
+54,17,Castilla y Leon,2001,28221.89,2041,Castilla y León,0.14937598
+55,17,Castilla y Leon,1997,27938.6,1703,Castilla y León,0.16032283
+56,9,Comunidad Valenciana,1990,27554.8,626,Comunitat Valenciana,0.09288258
+57,17,Castilla y Leon,1984,27412.6,945,Castilla y León,0.14967984
+58,4,Andalucia,1981,27385.5,772,Andalucía,0.093279
+59,9,Comunidad Valenciana,1992,26188.5,770,Comunitat Valenciana,0.08117009
+60,3,Galicia,2002,26125.21,10773,Galicia,0.23985359
+61,9,Comunidad Valenciana,1993,25966.7,715,Comunitat Valenciana,0.08530193
+62,17,Castilla y Leon,1982,25863.5,926,Castilla y León,0.13703433
+63,8,Region de Murcia,1994,25731.2,166,Región de Murcia,0.08923298
+64,14,Extremadura,1989,25657.6,861,Extremadura,0.14481913
+65,5,Principado de Asturias,1997,25559.4,1948,Principado de Asturias,0.23027267
+66,11,Castilla La Mancha,1985,25091.1,390,Castilla-La Mancha,0.104652554
+67,3,Galicia,1996,24003.06,10260,Galicia,0.24995872
+68,2,Cataluna,1983,23938.8,583,Cataluña/Catalunya,0.1124128
+69,14,Extremadura,1984,23058.2,383,Extremadura,0.15537412
+70,11,Castilla La Mancha,2005,22708.02,1137,Castilla-La Mancha,0.10919267
+71,9,Comunidad Valenciana,1984,22500.7,470,Comunitat Valenciana,0.07732571
+72,4,Andalucia,1988,22358.8,865,Andalucía,0.124982655
+73,4,Andalucia,1984,21983.7,660,Andalucía,0.12190145
+74,5,Principado de Asturias,2015,21824.7,1552,Principado de Asturias,0.22689614
+75,3,Galicia,2016,21533.76,2354,Galicia,0.26472145
+76,2,Cataluna,1998,20992.26,963,Cataluña/Catalunya,0.14056681
+77,2,Cataluna,1981,20922.3,634,Cataluña/Catalunya,0.12437545
+78,3,Galicia,2003,19819.7,8553,Galicia,0.26156455
+79,3,Galicia,2013,19775.88,3581,Galicia,0.25562727
+80,10,Aragon,2009,19648.41,443,Aragón,0.13337417
+81,5,Principado de Asturias,2000,19420.72,1971,Principado de Asturias,0.21259688
+82,5,Principado de Asturias,2002,19122.59,1560,Principado de Asturias,0.22517934
+83,14,Extremadura,1987,18969.5,499,Extremadura,0.14913787
+84,6,Cantabria,1989,18882.2,1226,Cantabria,0.17089082
+85,4,Andalucia,1992,18856.9,1559,Andalucía,0.11739869
+86,17,Castilla y Leon,1992,18712.4,1615,Castilla y León,0.13351972
+87,3,Galicia,2001,18353.59,9985,Galicia,0.24523707
+88,5,Principado de Asturias,1981,18105.8,542,Principado de Asturias,0.21269767
+89,4,Andalucia,1982,17862.2,628,Andalucía,0.105633564
+90,2,Cataluna,1982,17845.8,493,Cataluña/Catalunya,0.11833721
+91,11,Castilla La Mancha,1986,17830.4,235,Castilla-La Mancha,0.107264124
+92,4,Andalucia,1990,17766.0,1710,Andalucía,0.12695621
+93,4,Andalucia,1989,17638.5,1387,Andalucía,0.11831156
+94,17,Castilla y Leon,2011,17621.69,2194,Castilla y León,0.16486725
+95,14,Extremadura,2005,17582.22,1164,Extremadura,0.14400157
+96,17,Castilla y Leon,1996,17499.6,1533,Castilla y León,0.15268102
+97,4,Andalucia,1993,17342.3,1288,Andalucía,0.119686104
+98,5,Principado de Asturias,1982,16988.0,353,Principado de Asturias,0.1987725
+99,5,Principado de Asturias,2012,16616.57,2246,Principado de Asturias,0.22773147
+100,6,Cantabria,2015,16359.33,768,Cantabria,0.18138576
+101,14,Extremadura,2004,16141.45,1623,Extremadura,0.16897355
+102,17,Castilla y Leon,2008,16059.66,2094,Castilla y León,0.1694889
+103,11,Castilla La Mancha,1991,16002.4,615,Castilla-La Mancha,0.119157396
+104,17,Castilla y Leon,2004,15786.03,1942,Castilla y León,0.16617362
+105,17,Castilla y Leon,2006,15714.84,1697,Castilla y León,0.16393141
+106,3,Galicia,2012,15598.17,3794,Galicia,0.25705108
+107,9,Comunidad Valenciana,1983,15579.2,494,Comunitat Valenciana,0.067860514
+108,5,Principado de Asturias,1995,15422.2,1762,Principado de Asturias,0.22921471
+109,3,Galicia,1994,15397.1,8480,Galicia,0.24056074
+110,2,Cataluna,2012,15026.91,748,Cataluña/Catalunya,0.13757883
+111,3,Galicia,2010,14807.34,3852,Galicia,0.25469178
+112,4,Andalucia,2005,14380.03,1397,Andalucía,0.114795126
+113,4,Andalucia,2015,14230.54,817,Andalucía,0.13397755
+114,6,Cantabria,2012,14037.65,800,Cantabria,0.18706654
+115,5,Principado de Asturias,2011,13991.71,1793,Principado de Asturias,0.23588589
+116,9,Comunidad Valenciana,1982,13929.6,365,Comunitat Valenciana,0.073786706
+117,17,Castilla y Leon,2002,13758.75,1528,Castilla y León,0.15520617
+118,4,Andalucia,2009,13555.84,1016,Andalucía,0.12777834
+119,11,Castilla La Mancha,2000,13459.289999999999,735,Castilla-La Mancha,0.117593095
+120,11,Castilla La Mancha,1981,13320.2,360,Castilla-La Mancha,0.100227684
+121,17,Castilla y Leon,2015,13316.54,1732,Castilla y León,0.1691723
+122,14,Extremadura,1981,13295.3,302,Extremadura,0.11151379
+123,2,Cataluna,1985,13285.5,667,Cataluña/Catalunya,0.11725342
+124,17,Castilla y Leon,1983,13049.2,672,Castilla y León,0.14244755
+125,4,Andalucia,1995,12971.5,1389,Andalucía,0.10010634
+126,14,Extremadura,1990,12950.7,638,Extremadura,0.15867108
+127,3,Galicia,1991,12855.2,4717,Galicia,0.23381399
+128,4,Andalucia,2012,12833.39,852,Andalucía,0.12716016
+129,14,Extremadura,2015,12782.11,901,Extremadura,0.16866507
+130,4,Andalucia,1983,12780.5,636,Andalucía,0.10002974
+131,17,Castilla y Leon,2013,12434.28,1254,Castilla y León,0.17275299
+132,3,Galicia,1992,12293.2,8145,Galicia,0.22173427
+133,3,Galicia,2015,12235.49,2852,Galicia,0.25969034
+134,4,Andalucia,2003,11842.02,1076,Andalucía,0.13177665
+135,11,Castilla La Mancha,2012,11770.789999999999,1141,Castilla-La Mancha,0.120611
+136,17,Castilla y Leon,2016,11712.2,1343,Castilla y León,0.17835207
+137,4,Andalucia,1987,11704.4,781,Andalucía,0.116401926
+138,5,Principado de Asturias,1999,11679.95,1512,Principado de Asturias,0.2218775
+139,14,Extremadura,2001,11464.91,1190,Extremadura,0.15806179
+140,1,Pais Vasco,1989,11293.5,749,País Vasco/Euskadi,0.16147268
+141,14,Extremadura,2002,11154.08,1129,Extremadura,0.1677255
+142,5,Principado de Asturias,1988,10911.2,300,Principado de Asturias,0.21102376
+143,11,Castilla La Mancha,2003,10849.15,1040,Castilla-La Mancha,0.12339787
+144,17,Castilla y Leon,1993,10816.0,1297,Castilla y León,0.15760712
+145,3,Galicia,2009,10741.31,3970,Galicia,0.25270113
+146,4,Andalucia,2002,10640.74,1181,Andalucía,0.12550016
+147,5,Principado de Asturias,2009,10595.72,2077,Principado de Asturias,0.22801077
+148,3,Galicia,1999,10514.75,8593,Galicia,0.25458595
+149,5,Principado de Asturias,1990,10454.9,1018,Principado de Asturias,0.21170464
+150,6,Cantabria,2014,10105.73,806,Cantabria,0.18958244
+151,16,Comunidad de Madrid,1985,9894.4,140,Comunidad de Madrid,0.08649411
+152,2,Cataluna,2003,9865.94,703,Cataluña/Catalunya,0.13976787
+153,17,Castilla y Leon,2007,9760.289999999999,1511,Castilla y León,0.17282072
+154,10,Aragon,1986,9721.7,157,Aragón,0.11020998
+155,6,Cantabria,2011,9670.67,775,Cantabria,0.19291644
+156,5,Principado de Asturias,2006,9543.59,1941,Principado de Asturias,0.2266401
+157,2,Cataluna,1984,9475.1,394,Cataluña/Catalunya,0.12320448
+158,9,Comunidad Valenciana,1986,9387.8,385,Comunitat Valenciana,0.07307353
+159,6,Cantabria,2002,9165.5,428,Cantabria,0.18029393
+160,5,Principado de Asturias,1992,9150.8,923,Principado de Asturias,0.1990336
+161,14,Extremadura,1988,9030.3,497,Extremadura,0.15873764
+162,17,Castilla y Leon,2010,8901.41,1173,Castilla y León,0.16344051
+163,5,Principado de Asturias,2005,8717.87,2237,Principado de Asturias,0.2207735
+164,11,Castilla La Mancha,1982,8659.199999999999,216,Castilla-La Mancha,0.10317424
+165,3,Galicia,1983,8432.0,843,Galicia,0.22895704
+166,2,Cataluna,2000,8342.26,790,Cataluña/Catalunya,0.12637988
+167,10,Aragon,2012,8244.51,541,Aragón,0.12989901
+168,9,Comunidad Valenciana,2007,8224.69,375,Comunitat Valenciana,0.09359591
+169,11,Castilla La Mancha,2009,8210.2,899,Castilla-La Mancha,0.11803744
+170,4,Andalucia,2014,8143.69,785,Andalucía,0.133342
+171,3,Galicia,1993,8076.4,7158,Galicia,0.23609157
+172,10,Aragon,1981,8048.9,251,Aragón,0.10616505
+173,5,Principado de Asturias,2010,7995.63,1862,Principado de Asturias,0.22360945
+174,10,Aragon,1991,7993.0,288,Aragón,0.12682676
+175,6,Cantabria,2010,7921.54,764,Cantabria,0.18026286
+176,5,Principado de Asturias,2014,7878.78,1629,Principado de Asturias,0.23601247
+177,10,Aragon,2015,7855.87,341,Aragón,0.1395638
+178,6,Cantabria,2008,7804.67,443,Cantabria,0.18504618
+179,11,Castilla La Mancha,1990,7551.1,558,Castilla-La Mancha,0.119552165
+180,4,Andalucia,2001,7351.39,961,Andalucía,0.12094621
+181,13,Comunidad Foral de Navarra,1989,7204.400000000001,540,Comunidad Foral de Navarra,0.12446148
+182,5,Principado de Asturias,1998,7180.3,961,Principado de Asturias,0.23196812
+183,14,Extremadura,2006,7111.95,943,Extremadura,0.16828533
+184,10,Aragon,1983,7109.5,174,Aragón,0.104663864
+185,3,Galicia,2007,7051.06,3157,Galicia,0.25795898
+186,2,Cataluna,1995,7039.7,753,Cataluña/Catalunya,0.1340725
+187,9,Comunidad Valenciana,2016,6919.82,341,Comunitat Valenciana,0.08855916
+188,11,Castilla La Mancha,1984,6726.0,200,Castilla-La Mancha,0.11642764
+189,6,Cantabria,2009,6700.3,797,Cantabria,0.18600243
+190,5,Principado de Asturias,2008,6685.62,1741,Principado de Asturias,0.22929034
+191,2,Cataluna,1993,6662.2,791,Cataluña/Catalunya,0.13130638
+192,4,Andalucia,1999,6627.21,892,Andalucía,0.113591485
+193,14,Extremadura,2000,6578.46,1222,Extremadura,0.15814015
+194,9,Comunidad Valenciana,2000,6547.7699999999995,606,Comunitat Valenciana,0.07964304
+195,6,Cantabria,1997,6527.6,484,Cantabria,0.18649831
+196,5,Principado de Asturias,2003,6411.78,2067,Principado de Asturias,0.23152143
+197,9,Comunidad Valenciana,1999,6356.5,579,Comunitat Valenciana,0.084382795
+198,3,Galicia,2008,6335.84,2546,Galicia,0.25541362
+199,14,Extremadura,2016,6315.53,631,Extremadura,0.17971231
+200,4,Andalucia,2007,6269.75,819,Andalucía,0.13125579
+201,5,Principado de Asturias,1994,6254.8,991,Principado de Asturias,0.20607436
+202,11,Castilla La Mancha,2002,6241.75,946,Castilla-La Mancha,0.119121835
+203,10,Aragon,1993,6188.7,305,Aragón,0.12450357
+204,14,Extremadura,1994,6106.1,1069,Extremadura,0.16327491
+205,14,Extremadura,2009,6082.61,956,Extremadura,0.15211782
+206,14,Extremadura,2007,6032.6,748,Extremadura,0.17135978
+207,11,Castilla La Mancha,2001,5925.33,858,Castilla-La Mancha,0.11266536
+208,14,Extremadura,1998,5867.15,1061,Extremadura,0.17394377
+209,14,Extremadura,1992,5809.0,590,Extremadura,0.13484982
+210,11,Castilla La Mancha,2004,5765.2,1364,Castilla-La Mancha,0.12891565
+211,9,Comunidad Valenciana,1987,5720.9,406,Comunitat Valenciana,0.07965425
+212,9,Comunidad Valenciana,2010,5649.5,328,Comunitat Valenciana,0.09809143
+213,14,Extremadura,2013,5547.74,700,Extremadura,0.18096146
+214,2,Cataluna,2005,5495.070000000001,894,Cataluña/Catalunya,0.13084196
+215,4,Andalucia,2006,5471.48,881,Andalucía,0.13084807
+216,2,Cataluna,1991,5422.0,781,Cataluña/Catalunya,0.13221438
+217,4,Andalucia,2000,5411.3,938,Andalucía,0.12194639
+218,6,Cantabria,1995,5406.9,475,Cantabria,0.18668617
+219,11,Castilla La Mancha,2014,5368.66,760,Castilla-La Mancha,0.12254805
+220,6,Cantabria,1985,5261.5,391,Cantabria,0.16849548
+221,4,Andalucia,1998,5240.85,1136,Andalucía,0.13558698
+222,14,Extremadura,1983,5145.2,221,Extremadura,0.12400825
+223,6,Cantabria,2013,4925.11,449,Cantabria,0.17988428
+224,17,Castilla y Leon,2014,4915.47,1386,Castilla y León,0.16886787
+225,11,Castilla La Mancha,2013,4907.56,824,Castilla-La Mancha,0.13114242
+226,6,Cantabria,1990,4900.8,388,Cantabria,0.1718859
+227,11,Castilla La Mancha,1989,4900.3,435,Castilla-La Mancha,0.11349109
+228,6,Cantabria,2005,4872.61,461,Cantabria,0.17165962
+229,5,Principado de Asturias,1987,4837.3,300,Principado de Asturias,0.20672819
+230,6,Cantabria,1981,4794.2,290,Cantabria,0.17653485
+231,9,Comunidad Valenciana,2001,4792.75,442,Comunitat Valenciana,0.08046471
+232,5,Principado de Asturias,2004,4732.06,1905,Principado de Asturias,0.2285228
+233,10,Aragon,1985,4725.5,220,Aragón,0.107937515
+234,11,Castilla La Mancha,2006,4617.85,707,Castilla-La Mancha,0.12068825
+235,4,Andalucia,2016,4599.4,753,Andalucía,0.13450056
+236,10,Aragon,2001,4570.320000000001,406,Aragón,0.11931222
+237,6,Cantabria,1992,4494.2,396,Cantabria,0.16510463
+238,14,Extremadura,2011,4453.32,905,Extremadura,0.17133202
+239,14,Extremadura,1995,4323.3,1357,Extremadura,0.13276058
+240,2,Cataluna,1989,4234.0,670,Cataluña/Catalunya,0.12211148
+241,14,Extremadura,2014,4217.16,634,Extremadura,0.17775212
+242,10,Aragon,1984,4136.7,167,Aragón,0.11929065
+243,14,Extremadura,1996,4111.4,982,Extremadura,0.16583796
+244,6,Cantabria,2006,4045.43,418,Cantabria,0.18219444
+245,6,Cantabria,1999,3961.68,381,Cantabria,0.1769335
+246,5,Principado de Asturias,1984,3858.7000000000003,266,Principado de Asturias,0.19905764
+247,10,Aragon,1995,3850.2999999999997,377,Aragón,0.1239724
+248,7,La Rioja,1985,3836.2000000000003,94,La Rioja,0.118758775
+249,5,Principado de Asturias,1991,3766.1,419,Principado de Asturias,0.20646454
+250,6,Cantabria,1994,3725.1,246,Cantabria,0.17018549
+251,11,Castilla La Mancha,2015,3715.89,919,Castilla-La Mancha,0.124117486
+252,6,Cantabria,2000,3678.53,359,Cantabria,0.17519721
+253,14,Extremadura,1999,3614.66,953,Extremadura,0.14793484
+254,11,Castilla La Mancha,1983,3552.2,229,Castilla-La Mancha,0.09771749
+255,5,Principado de Asturias,1996,3505.0,706,Principado de Asturias,0.22142178
+256,14,Extremadura,2012,3482.44,1072,Extremadura,0.16015987
+257,9,Comunidad Valenciana,2006,3474.55,472,Comunitat Valenciana,0.08832427
+258,2,Cataluna,2009,3452.9700000000003,747,Cataluña/Catalunya,0.13932331
+259,6,Cantabria,2007,3452.83,296,Cantabria,0.18759641
+260,11,Castilla La Mancha,2016,3436.03,676,Castilla-La Mancha,0.12711866
+261,2,Cataluna,2006,3404.6800000000003,629,Cataluña/Catalunya,0.1353558
+262,6,Cantabria,1996,3382.2,309,Cantabria,0.17693482
+263,5,Principado de Asturias,2013,3331.77,1079,Principado de Asturias,0.22389188
+264,9,Comunidad Valenciana,2003,3331.2799999999997,408,Comunitat Valenciana,0.08991061
+265,9,Comunidad Valenciana,2005,3285.12,686,Comunitat Valenciana,0.08569466
+266,5,Principado de Asturias,1983,3278.5,170,Principado de Asturias,0.20466508
+267,15,Islas Baleares,1983,3240.9,130,Illes Balears,0.022781463
+268,7,La Rioja,1981,3233.9,111,La Rioja,0.12113233
+269,10,Aragon,1982,3137.1,130,Aragón,0.10945345
+270,11,Castilla La Mancha,1988,3122.6,308,Castilla-La Mancha,0.122053936
+271,5,Principado de Asturias,2001,3080.34,1185,Principado de Asturias,0.21723717
+272,4,Andalucia,2011,3053.15,751,Andalucía,0.13743123
+273,16,Comunidad de Madrid,2003,3047.47,324,Comunidad de Madrid,0.10776535
+274,14,Extremadura,1982,3020.0,158,Extremadura,0.13162921
+275,2,Cataluna,2001,2994.93,724,Cataluña/Catalunya,0.12533292
+276,11,Castilla La Mancha,1999,2955.68,624,Castilla-La Mancha,0.11672124
+277,4,Andalucia,1997,2951.17,750,Andalucía,0.124983214
+278,9,Comunidad Valenciana,2009,2932.29,427,Comunitat Valenciana,0.09627502
+279,4,Andalucia,2008,2895.02,776,Andalucía,0.13003142
+280,6,Cantabria,2003,2884.8,258,Cantabria,0.18309186
+281,4,Andalucia,2013,2880.7799999999997,785,Andalucía,0.13893338
+282,5,Principado de Asturias,1993,2856.8,487,Principado de Asturias,0.20791711
+283,15,Islas Baleares,2013,2845.45,90,Illes Balears,0.029435081
+284,11,Castilla La Mancha,1987,2823.8,289,Castilla-La Mancha,0.111687936
+285,7,La Rioja,1986,2809.4,61,La Rioja,0.1097706
+286,9,Comunidad Valenciana,1988,2702.0,320,Comunitat Valenciana,0.08716012
+287,5,Principado de Asturias,2007,2690.31,1083,Principado de Asturias,0.23312789
+288,14,Extremadura,1993,2667.3,731,Extremadura,0.141516
+289,13,Comunidad Foral de Navarra,1994,2629.7,211,Comunidad Foral de Navarra,0.13239495
+290,16,Comunidad de Madrid,1986,2581.3,148,Comunidad de Madrid,0.09427031
+291,10,Aragon,2000,2570.02,417,Aragón,0.12194864
+292,1,Pais Vasco,1985,2521.6,159,País Vasco/Euskadi,0.16207081
+293,5,Principado de Asturias,1986,2515.9,200,Principado de Asturias,0.20194529
+294,6,Cantabria,2016,2502.91,253,Cantabria,0.18470387
+295,15,Islas Baleares,1992,2494.7,135,Illes Balears,0.027183155
+296,10,Aragon,2008,2489.3399999999997,351,Aragón,0.13267477
+297,16,Comunidad de Madrid,2000,2457.34,339,Comunidad de Madrid,0.10165266
+298,15,Islas Baleares,1994,2454.2,143,Illes Balears,0.027969733
+299,11,Castilla La Mancha,1993,2441.7,486,Castilla-La Mancha,0.11766843
+300,6,Cantabria,1982,2438.7,236,Cantabria,0.16856432
+301,9,Comunidad Valenciana,2011,2436.38,419,Comunitat Valenciana,0.09464408
+302,14,Extremadura,1997,2434.5,720,Extremadura,0.16007045
+303,9,Comunidad Valenciana,2015,2417.85,315,Comunitat Valenciana,0.09334349
+304,16,Comunidad de Madrid,2012,2381.09,399,Comunidad de Madrid,0.103416465
+305,14,Extremadura,2008,2349.44,874,Extremadura,0.16343826
+306,15,Islas Baleares,2011,2341.4,158,Illes Balears,0.029775294
+307,6,Cantabria,1998,2295.48,245,Cantabria,0.18955518
+308,10,Aragon,1989,2264.1,294,Aragón,0.11647363
+309,13,Comunidad Foral de Navarra,2002,2248.08,119,Comunidad Foral de Navarra,0.13283081
+310,14,Extremadura,2010,2244.77,550,Extremadura,0.16577643
+311,9,Comunidad Valenciana,1995,2220.4,467,Comunitat Valenciana,0.07722057
+312,11,Castilla La Mancha,2011,2181.16,745,Castilla-La Mancha,0.12683651
+313,10,Aragon,2006,2153.68,411,Aragón,0.13371164
+314,6,Cantabria,1991,2150.6,246,Cantabria,0.16936587
+315,1,Pais Vasco,2002,2133.98,242,País Vasco/Euskadi,0.1766534
+316,10,Aragon,2005,2116.39,711,Aragón,0.12296363
+317,11,Castilla La Mancha,1998,2110.2,525,Castilla-La Mancha,0.1306874
+318,2,Cataluna,2002,2099.67,545,Cataluña/Catalunya,0.1343276
+319,6,Cantabria,2001,2088.82,357,Cantabria,0.17348638
+320,16,Comunidad de Madrid,1990,2040.0,129,Comunidad de Madrid,0.104046226
+321,11,Castilla La Mancha,2007,2026.46,694,Castilla-La Mancha,0.12693672
+322,2,Cataluna,2016,2015.63,561,Cataluña/Catalunya,0.14239855
+323,3,Galicia,2014,1991.14,1227,Galicia,0.26527435
+324,2,Cataluna,1987,1976.2,338,Cataluña/Catalunya,0.124564156
+325,11,Castilla La Mancha,2008,1974.86,710,Castilla-La Mancha,0.12512307
+326,9,Comunidad Valenciana,1998,1967.32,546,Comunitat Valenciana,0.089526705
+327,6,Cantabria,1993,1963.6,214,Cantabria,0.1714357
+328,16,Comunidad de Madrid,1991,1934.5,102,Comunidad de Madrid,0.101034924
+329,6,Cantabria,1983,1929.5,186,Cantabria,0.16692764
+330,13,Comunidad Foral de Navarra,1985,1890.7,90,Comunidad Foral de Navarra,0.12512062
+331,6,Cantabria,1984,1886.6,176,Cantabria,0.16215545
+332,9,Comunidad Valenciana,2014,1881.82,499,Comunitat Valenciana,0.08669845
+333,10,Aragon,2007,1860.38,415,Aragón,0.13492939
+334,10,Aragon,1987,1844.5,160,Aragón,0.12094426
+335,15,Islas Baleares,1981,1831.4,170,Illes Balears,0.024087787
+336,16,Comunidad de Madrid,2001,1801.94,294,Comunidad de Madrid,0.09797706
+337,6,Cantabria,1987,1779.0,227,Cantabria,0.17086402
+338,15,Islas Baleares,1990,1769.0,117,Illes Balears,0.02910586
+339,16,Comunidad de Madrid,2004,1765.23,379,Comunidad de Madrid,0.109322354
+340,2,Cataluna,1988,1752.0,646,Cataluña/Catalunya,0.12922809
+341,13,Comunidad Foral de Navarra,2009,1750.1200000000001,667,Comunidad Foral de Navarra,0.14019375
+342,13,Comunidad Foral de Navarra,2016,1715.3899999999999,184,Comunidad Foral de Navarra,0.1532067
+343,15,Islas Baleares,1993,1705.2,157,Illes Balears,0.02724498
+344,7,La Rioja,1982,1704.7,64,La Rioja,0.1141255
+345,6,Cantabria,2004,1701.52,178,Cantabria,0.18399213
+346,5,Principado de Asturias,2016,1685.2,640,Principado de Asturias,0.23239748
+347,13,Comunidad Foral de Navarra,2012,1675.86,661,Comunidad Foral de Navarra,0.14506066
+348,11,Castilla La Mancha,1992,1665.2,411,Castilla-La Mancha,0.11049808
+349,16,Comunidad de Madrid,2002,1630.21,314,Comunidad de Madrid,0.10311834
+350,2,Cataluna,2007,1612.25,579,Cataluña/Catalunya,0.13640718
+351,2,Cataluna,2015,1603.2800000000002,509,Cataluña/Catalunya,0.14210734
+352,15,Islas Baleares,1999,1587.91,152,Illes Balears,0.026645157
+353,2,Cataluna,2014,1569.29,460,Cataluña/Catalunya,0.14493081
+354,8,Region de Murcia,1991,1546.2,72,Región de Murcia,0.097088225
+355,7,La Rioja,1989,1531.9,142,La Rioja,0.117094494
+356,9,Comunidad Valenciana,1989,1526.8,392,Comunitat Valenciana,0.08803884
+357,16,Comunidad de Madrid,1994,1518.1,407,Comunidad de Madrid,0.10267554
+358,1,Pais Vasco,1987,1515.6,287,País Vasco/Euskadi,0.16211113
+359,10,Aragon,1988,1512.9,169,Aragón,0.13103719
+360,1,Pais Vasco,1998,1511.65,267,País Vasco/Euskadi,0.18354526
+361,10,Aragon,2002,1507.74,424,Aragón,0.12092355
+362,4,Andalucia,2010,1492.66,552,Andalucía,0.1316472
+363,2,Cataluna,1992,1486.8,368,Cataluña/Catalunya,0.12969649
+364,10,Aragon,2003,1486.0900000000001,335,Aragón,0.13907114
+365,8,Region de Murcia,2012,1479.8700000000001,127,Región de Murcia,0.09854511
+366,9,Comunidad Valenciana,2013,1442.82,335,Comunitat Valenciana,0.0930774
+367,11,Castilla La Mancha,1996,1441.0,429,Castilla-La Mancha,0.11731517
+368,16,Comunidad de Madrid,1995,1397.8,344,Comunidad de Madrid,0.09411175
+369,13,Comunidad Foral de Navarra,2005,1370.97,698,Comunidad Foral de Navarra,0.13655461
+370,16,Comunidad de Madrid,2013,1333.54,286,Comunidad de Madrid,0.11394114
+371,6,Cantabria,1988,1332.5,232,Cantabria,0.17264754
+372,1,Pais Vasco,1995,1316.4,255,País Vasco/Euskadi,0.17805949
+373,4,Andalucia,1996,1257.9,739,Andalucía,0.124183096
+374,2,Cataluna,1999,1251.16,843,Cataluña/Catalunya,0.13202617
+375,10,Aragon,2004,1234.9,421,Aragón,0.1403323
+376,8,Region de Murcia,1990,1211.9,187,Región de Murcia,0.105044305
+377,9,Comunidad Valenciana,2002,1202.05,321,Comunitat Valenciana,0.0843764
+378,10,Aragon,1990,1179.8,222,Aragón,0.1274443
+379,13,Comunidad Foral de Navarra,1986,1172.0,93,Comunidad Foral de Navarra,0.12123101
+380,10,Aragon,2010,1144.04,343,Aragón,0.13559173
+381,2,Cataluna,1990,1143.0,591,Cataluña/Catalunya,0.13265039
+382,13,Comunidad Foral de Navarra,2008,1133.79,595,Comunidad Foral de Navarra,0.1451248
+383,9,Comunidad Valenciana,2004,1102.1,487,Comunitat Valenciana,0.092326
+384,16,Comunidad de Madrid,1999,1102.05,263,Comunidad de Madrid,0.10330378
+385,2,Cataluna,2011,1097.57,586,Cataluña/Catalunya,0.14091454
+386,16,Comunidad de Madrid,2006,1094.95,271,Comunidad de Madrid,0.104737006
+387,13,Comunidad Foral de Navarra,2015,1084.28,287,Comunidad Foral de Navarra,0.15107015
+388,16,Comunidad de Madrid,1981,1069.6,190,Comunidad de Madrid,0.081138134
+389,2,Cataluna,2004,1068.18,565,Cataluña/Catalunya,0.14039248
+390,7,La Rioja,1984,1062.7,59,La Rioja,0.11969043
+391,2,Cataluna,2013,1060.16,602,Cataluña/Catalunya,0.14312957
+392,1,Pais Vasco,1983,1057.4,160,País Vasco/Euskadi,0.1554302
+393,1,Pais Vasco,1992,1035.3,159,País Vasco/Euskadi,0.15454915
+394,2,Cataluna,1996,1026.1,463,Cataluña/Catalunya,0.13735189
+395,11,Castilla La Mancha,1995,1021.6,569,Castilla-La Mancha,0.10312699
+396,15,Islas Baleares,1987,1014.5999999999999,144,Illes Balears,0.027097253
+397,16,Comunidad de Madrid,1987,1005.0,295,Comunidad de Madrid,0.10011489
+398,15,Islas Baleares,2000,993.68,160,Illes Balears,0.02501769
+399,1,Pais Vasco,1996,983.8,159,País Vasco/Euskadi,0.17257833
+400,13,Comunidad Foral de Navarra,2014,932.98,331,Comunidad Foral de Navarra,0.1517875
+401,2,Cataluna,1997,923.0,673,Cataluña/Catalunya,0.1381745
+402,1,Pais Vasco,2003,920.17,238,País Vasco/Euskadi,0.1788741
+403,10,Aragon,2016,908.36,306,Aragón,0.13944447
+404,10,Aragon,2011,900.92,442,Aragón,0.13388109
+405,9,Comunidad Valenciana,1997,898.2,348,Comunitat Valenciana,0.088025205
+406,13,Comunidad Foral de Navarra,1993,882.9,156,Comunidad Foral de Navarra,0.13529979
+407,1,Pais Vasco,1984,882.1,111,País Vasco/Euskadi,0.15764123
+408,1,Pais Vasco,1990,872.7,210,País Vasco/Euskadi,0.16509883
+409,1,Pais Vasco,2009,866.02,141,País Vasco/Euskadi,0.1769387
+410,16,Comunidad de Madrid,2005,825.39,427,Comunidad de Madrid,0.09641732
+411,1,Pais Vasco,2000,823.52,231,País Vasco/Euskadi,0.16601352
+412,16,Comunidad de Madrid,1992,807.5,302,Comunidad de Madrid,0.09009165
+413,1,Pais Vasco,2010,783.29,116,País Vasco/Euskadi,0.17705952
+414,1,Pais Vasco,1997,776.0,186,País Vasco/Euskadi,0.17772758
+415,13,Comunidad Foral de Navarra,2006,770.2,450,Comunidad Foral de Navarra,0.1472631
+416,11,Castilla La Mancha,1997,766.1,463,Castilla-La Mancha,0.117967874
+417,7,La Rioja,1983,765.3,45,La Rioja,0.11866528
+418,9,Comunidad Valenciana,1996,765.1,383,Comunitat Valenciana,0.08472937
+419,8,Region de Murcia,2010,763.49,139,Región de Murcia,0.109147824
+420,9,Comunidad Valenciana,2008,730.35,326,Comunitat Valenciana,0.09618724
+421,1,Pais Vasco,1986,728.6,147,País Vasco/Euskadi,0.16198164
+422,6,Cantabria,1986,722.1,113,Cantabria,0.16903079
+423,1,Pais Vasco,2001,721.22,196,País Vasco/Euskadi,0.16699676
+424,1,Pais Vasco,1994,713.8,69,País Vasco/Euskadi,0.16409543
+425,8,Region de Murcia,1981,705.2,24,Región de Murcia,0.07619854
+426,13,Comunidad Foral de Navarra,1990,699.0,150,Comunidad Foral de Navarra,0.13054286
+427,10,Aragon,1998,676.02,329,Aragón,0.13807596
+428,13,Comunidad Foral de Navarra,2010,652.26,598,Comunidad Foral de Navarra,0.14373605
+429,8,Region de Murcia,2015,642.0600000000001,130,Región de Murcia,0.099276975
+430,8,Region de Murcia,1993,631.4,120,Región de Murcia,0.100619026
+431,16,Comunidad de Madrid,1989,621.0,77,Comunidad de Madrid,0.09636793
+432,2,Cataluna,2010,618.88,475,Cataluña/Catalunya,0.14175612
+433,13,Comunidad Foral de Navarra,2011,614.79,559,Comunidad Foral de Navarra,0.146324
+434,1,Pais Vasco,1991,612.2,118,País Vasco/Euskadi,0.16371302
+435,11,Castilla La Mancha,2010,607.25,465,Castilla-La Mancha,0.12424987
+436,15,Islas Baleares,2010,605.84,100,Illes Balears,0.031880908
+437,1,Pais Vasco,2015,602.41,125,País Vasco/Euskadi,0.17882343
+438,13,Comunidad Foral de Navarra,1987,601.4,38,Comunidad Foral de Navarra,0.12916915
+439,15,Islas Baleares,1982,598.4,139,Illes Balears,0.025027048
+440,10,Aragon,1999,595.47,366,Aragón,0.13043883
+441,1,Pais Vasco,1988,589.0,208,País Vasco/Euskadi,0.16216207
+442,16,Comunidad de Madrid,2015,586.99,337,Comunidad de Madrid,0.10897727
+443,2,Cataluna,2008,577.4,421,Cataluña/Catalunya,0.13692617
+444,10,Aragon,1992,573.8,224,Aragón,0.116460346
+445,15,Islas Baleares,1988,568.1,91,Illes Balears,0.027089678
+446,15,Islas Baleares,1985,562.7,151,Illes Balears,0.024898147
+447,1,Pais Vasco,2005,562.02,192,País Vasco/Euskadi,0.17154047
+448,13,Comunidad Foral de Navarra,1991,559.4,174,Comunidad Foral de Navarra,0.1343434
+449,13,Comunidad Foral de Navarra,1992,547.8,90,Comunidad Foral de Navarra,0.12245513
+450,1,Pais Vasco,1993,542.1,141,País Vasco/Euskadi,0.1635365
+451,15,Islas Baleares,1986,513.4,158,Illes Balears,0.027605105
+452,7,La Rioja,1994,497.4,108,La Rioja,0.12668088
+453,16,Comunidad de Madrid,1984,494.0,116,Comunidad de Madrid,0.10032813
+454,7,La Rioja,1988,477.2,52,La Rioja,0.13230367
+455,8,Region de Murcia,2011,476.43,130,Región de Murcia,0.10038215
+456,10,Aragon,1997,474.9,241,Aragón,0.13230734
+457,13,Comunidad Foral de Navarra,2007,473.86,504,Comunidad Foral de Navarra,0.14768851
+458,7,La Rioja,1995,468.1,177,La Rioja,0.13385838
+459,13,Comunidad Foral de Navarra,2003,467.79,277,Comunidad Foral de Navarra,0.14518571
+460,15,Islas Baleares,1991,462.7,131,Illes Balears,0.030834056
+461,16,Comunidad de Madrid,2007,449.75,230,Comunidad de Madrid,0.10860115
+462,1,Pais Vasco,1982,439.2,85,País Vasco/Euskadi,0.1562842
+463,10,Aragon,2014,438.9,373,Aragón,0.13868937
+464,8,Region de Murcia,2004,437.47999999999996,113,Región de Murcia,0.101803705
+465,16,Comunidad de Madrid,2016,429.23999999999995,289,Comunidad de Madrid,0.11287172
+466,1,Pais Vasco,2011,425.14,140,País Vasco/Euskadi,0.18519592
+467,15,Islas Baleares,1995,424.7,116,Illes Balears,0.028344896
+468,15,Islas Baleares,2012,404.66,147,Illes Balears,0.029349638
+469,15,Islas Baleares,1984,400.5,110,Illes Balears,0.026594834
+470,1,Pais Vasco,2014,398.34999999999997,157,País Vasco/Euskadi,0.18289477
+471,16,Comunidad de Madrid,2011,385.0,294,Comunidad de Madrid,0.10781532
+472,1,Pais Vasco,1981,381.6,51,País Vasco/Euskadi,0.16325597
+473,15,Islas Baleares,1989,364.09999999999997,78,Illes Balears,0.025692586
+474,16,Comunidad de Madrid,2014,364.04,363,Comunidad de Madrid,0.10564718
+475,8,Region de Murcia,1992,363.8,112,Región de Murcia,0.09148437
+476,1,Pais Vasco,1999,359.36,199,País Vasco/Euskadi,0.17127092
+477,16,Comunidad de Madrid,1983,357.1,69,Comunidad de Madrid,0.08080215
+478,13,Comunidad Foral de Navarra,2013,356.79,258,Comunidad Foral de Navarra,0.14701079
+479,7,La Rioja,1991,355.8,60,La Rioja,0.123999216
+480,10,Aragon,2013,347.71999999999997,217,Aragón,0.14356658
+481,15,Islas Baleares,2005,347.39000000000004,141,Illes Balears,0.029500034
+482,1,Pais Vasco,2012,344.81,140,País Vasco/Euskadi,0.17929253
+483,8,Region de Murcia,2016,344.59000000000003,115,Región de Murcia,0.089519486
+484,16,Comunidad de Madrid,2008,338.94,223,Comunidad de Madrid,0.10578422
+485,13,Comunidad Foral de Navarra,2004,338.24,261,Comunidad Foral de Navarra,0.14521249
+486,7,La Rioja,2009,336.68,112,La Rioja,0.13238387
+487,15,Islas Baleares,2001,332.81,127,Illes Balears,0.02647078
+488,8,Region de Murcia,1996,329.2,99,Región de Murcia,0.08279251
+489,16,Comunidad de Madrid,2009,324.64,327,Comunidad de Madrid,0.09644581
+490,7,La Rioja,2001,318.98,123,La Rioja,0.120931715
+491,7,La Rioja,1990,289.8,67,La Rioja,0.12389891
+492,7,La Rioja,2010,281.84000000000003,114,La Rioja,0.13551584
+493,7,La Rioja,2015,281.74,58,La Rioja,0.14206886
+494,8,Region de Murcia,2014,270.85,137,Región de Murcia,0.088451914
+495,8,Region de Murcia,2005,257.51,138,Región de Murcia,0.089650944
+496,10,Aragon,1996,255.5,262,Aragón,0.12512459
+497,16,Comunidad de Madrid,1998,244.55,167,Comunidad de Madrid,0.11326818
+498,1,Pais Vasco,2008,240.31,81,País Vasco/Euskadi,0.18087247
+499,7,La Rioja,2000,225.32,197,La Rioja,0.1275322
+500,7,La Rioja,1993,224.70000000000002,63,La Rioja,0.12996596
+501,1,Pais Vasco,2004,223.19,126,País Vasco/Euskadi,0.17817129
+502,15,Islas Baleares,2003,219.09,127,Illes Balears,0.029993668
+503,15,Islas Baleares,2016,216.71,114,Illes Balears,0.029633587
+504,7,La Rioja,1998,181.42000000000002,126,La Rioja,0.14239673
+505,7,La Rioja,2005,174.09,105,La Rioja,0.12718001
+506,15,Islas Baleares,1998,172.3,115,Illes Balears,0.029957145
+507,7,La Rioja,1999,172.28,102,La Rioja,0.13308215
+508,1,Pais Vasco,2013,170.08,92,País Vasco/Euskadi,0.17715316
+509,15,Islas Baleares,2006,165.27,124,Illes Balears,0.028292382
+510,7,La Rioja,2002,165.02,124,La Rioja,0.12557937
+511,8,Region de Murcia,2008,162.28,109,Región de Murcia,0.101197824
+512,8,Region de Murcia,2007,160.18,113,Región de Murcia,0.10454328
+513,16,Comunidad de Madrid,1982,160.0,47,Comunidad de Madrid,0.08986963
+514,7,La Rioja,1987,159.5,27,La Rioja,0.11921343
+515,8,Region de Murcia,1998,149.34,170,Región de Murcia,0.10226606
+516,1,Pais Vasco,2016,144.51,77,País Vasco/Euskadi,0.18369265
+517,8,Region de Murcia,2000,143.98,178,Región de Murcia,0.0826283
+518,8,Region de Murcia,1989,140.2,45,Región de Murcia,0.09638421
+519,15,Islas Baleares,2004,139.35,172,Illes Balears,0.029538916
+520,8,Region de Murcia,2003,130.0,158,Región de Murcia,0.09378539
+521,15,Islas Baleares,2007,123.9,113,Illes Balears,0.030408133
+522,8,Region de Murcia,2009,112.55000000000001,124,Región de Murcia,0.10809887
+523,7,La Rioja,2014,111.94,95,La Rioja,0.14540052
+524,7,La Rioja,2003,110.01,64,La Rioja,0.13803984
+525,15,Islas Baleares,2009,109.58,117,Illes Balears,0.03140378
+526,7,La Rioja,1992,109.3,92,La Rioja,0.11580131
+527,7,La Rioja,2012,109.03,105,La Rioja,0.13572222
+528,15,Islas Baleares,2015,106.72,77,Illes Balears,0.030995904
+529,1,Pais Vasco,2007,105.61,67,País Vasco/Euskadi,0.18017179
+530,7,La Rioja,1996,103.60000000000001,78,La Rioja,0.13045262
+531,16,Comunidad de Madrid,2010,101.46,179,Comunidad de Madrid,0.10389628
+532,8,Region de Murcia,1999,97.85,164,Región de Murcia,0.09414159
+533,1,Pais Vasco,2006,95.09,108,País Vasco/Euskadi,0.18087281
+534,8,Region de Murcia,1987,93.3,24,Región de Murcia,0.084859215
+535,7,La Rioja,2016,92.28,47,La Rioja,0.14232093
+536,8,Region de Murcia,1984,91.7,24,Región de Murcia,0.07810005
+537,8,Region de Murcia,2002,89.51,166,Región de Murcia,0.090012066
+538,15,Islas Baleares,1996,87.4,75,Illes Balears,0.030387513
+539,8,Region de Murcia,2013,83.35,112,Región de Murcia,0.10265568
+540,8,Region de Murcia,1982,82.7,30,Región de Murcia,0.071283646
+541,8,Region de Murcia,2001,81.91,141,Región de Murcia,0.08080787
+542,16,Comunidad de Madrid,1993,81.6,87,Comunidad de Madrid,0.10066002
+543,8,Region de Murcia,1997,77.32,121,Región de Murcia,0.09952824
+544,15,Islas Baleares,1997,71.9,101,Illes Balears,0.028947962
+545,8,Region de Murcia,1995,71.8,122,Región de Murcia,0.07615783
+546,7,La Rioja,2008,71.56,110,La Rioja,0.13912034
+547,8,Region de Murcia,2006,71.37,90,Región de Murcia,0.09406456
+548,7,La Rioja,2007,69.49000000000001,93,La Rioja,0.1385486
+549,8,Region de Murcia,1983,68.9,25,Región de Murcia,0.071002595
+550,16,Comunidad de Madrid,1997,68.4,117,Comunidad de Madrid,0.100200266
+551,7,La Rioja,2011,62.64,82,La Rioja,0.13835016
+552,16,Comunidad de Madrid,1996,60.7,93,Comunidad de Madrid,0.099720836
+553,7,La Rioja,1997,60.38,93,La Rioja,0.13791955
+554,15,Islas Baleares,2014,60.260000000000005,103,Illes Balears,0.029786458
+555,15,Islas Baleares,2002,57.82,73,Illes Balears,0.029376624
+556,8,Region de Murcia,1986,52.199999999999996,13,Región de Murcia,0.080111414
+557,7,La Rioja,2006,49.87,73,La Rioja,0.1390927
+558,15,Islas Baleares,2008,44.96,121,Illes Balears,0.031080676
+559,16,Comunidad de Madrid,1988,37.1,19,Comunidad de Madrid,0.10476328
+560,7,La Rioja,2004,35.69,47,La Rioja,0.14323361
+561,8,Region de Murcia,1985,32.2,19,Región de Murcia,0.06957368
+562,7,La Rioja,2013,27.65,31,La Rioja,0.14561652
+563,8,Region de Murcia,1988,9.6,21,Región de Murcia,0.08846883
