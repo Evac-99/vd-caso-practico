@@ -17,53 +17,13 @@ st.set_page_config(
 # Declare some useful functions.
 
 @st.cache_data
-def get_incendios_data():
-    """Grab GDP data from a CSV file.
-
-    This uses caching to avoid having to read the file every time. If we were
-    reading from an HTTP endpoint instead of a file, it's a good idea to set
-    a maximum age to the cache with the TTL argument: @st.cache_data(ttl='1d')
-    """
-
-    # Instead of a CSV on disk, you could read from an HTTP endpoint here too.
-    DATA_FILENAME = 'data/incendios.csv'    
-    df = pd.read_csv(DATA_FILENAME)
-
-    MIN_YEAR = 1961
-    MAX_YEAR = 2016
-
-    return df
-
-@st.cache_data
-def get_incendios_data_NDVI():
-    """Grab GDP data from a CSV file.
-
-    This uses caching to avoid having to read the file every time. If we were
-    reading from an HTTP endpoint instead of a file, it's a good idea to set
-    a maximum age to the cache with the TTL argument: @st.cache_data(ttl='1d')
-    """
-
-    # Instead of a CSV on disk, you could read from an HTTP endpoint here too.
-    DATA_FILENAME = 'data/merged_data.csv'    
-    df = pd.read_csv(DATA_FILENAME)
-
-    MIN_YEAR = 1961
-    MAX_YEAR = 2016
-
-    return df
-
-@st.cache_data
-def get_monthly_ndvi():
-    """Grab GDP data from a CSV file.
-
-    This uses caching to avoid having to read the file every time. If we were
-    reading from an HTTP endpoint instead of a file, it's a good idea to set
-    a maximum age to the cache with the TTL argument: @st.cache_data(ttl='1d')
-    """
-    DATA_FILENAME = 'data/NDVI_mensual.csv'    
+def get_data_from_csv(file_path):
+    DATA_FILENAME = file_path   
     df = pd.read_csv(DATA_FILENAME)
 
     return df
+
+
 
 
 def fires_per_reg_barchart(input_df):
@@ -246,17 +206,48 @@ def serious_fires_ndvi(ndvi, fires):
 
     return combined_chart
 
-def previous_ndvi(ndvi, fires):
-    
+def previous_ndvi(input_df):
+    data = input_df[(input_df.anio >= from_year) & (input_df.anio <= to_year)].groupby(["fortnight", "anio", "provincia"]).agg({
+        "NDVI_previo": ["mean"],
+        "perdidassuperficiales": ["sum", "mean", "max"],
+        "geometry": "count"
+    }).reset_index().copy()
+
+    data.columns = [
+        "_".join(col).strip("_") if isinstance(col, tuple) else col
+        for col in data.columns
+    ]
+
+    data = data.rename(columns={"geometry_count": "n_incendios"})
+
+    scatter = alt.Chart(data).mark_circle(size=100).encode(
+        x=alt.X('n_incendios:Q', title='Número de incendios'),
+        y=alt.Y('perdidassuperficiales_sum:Q', title='Hectáreas quemadas'),
+        color=alt.Color('NDVI_previo_mean:Q', title='NDVI medio', scale=alt.Scale(scheme='viridis')),
+        tooltip=[
+            alt.Tooltip('provincia:N', title='Comunidad'),
+            alt.Tooltip('n_incendios:Q'),
+            alt.Tooltip('perdidassuperficiales_sum:Q'),
+            alt.Tooltip('NDVI_previo_mean:Q')
+        ]
+    ).properties(
+        width=700,
+        height=500,
+        title='Relación entre incendios, hectáreas quemadas y NDVI por comunidad y año'
+    )
+
+    return scatter
 
 
-incendios = get_incendios_data()
-incendios_ndvi = get_incendios_data_NDVI()
-ndvi_mensual = get_monthly_ndvi()
+incendios = get_data_from_csv('data/incendios.csv')
+incendios_ndvi = get_data_from_csv('data/merged_data.csv')
+ndvi_mensual = get_data_from_csv('data/NDVI_mensual.csv' )
+incendios_ndvi_previo = get_data_from_csv('data/NDVI_previo_incendios.csv')
 
 meses_ordenados = ['enero', 'febrero', 'marzo', 'abril', 'mayo',
                    'junio', 'julio', 'agosto', 'septiembre', 'octubre',
                    'noviembre', 'diciembre']
+
 with st.sidebar: 
     st.title("Filtros")
     min_value = incendios['anio'].min()
@@ -292,60 +283,6 @@ with col[0]:
 with col[1]:    
     st.altair_chart(fires_per_5year(incendios))
     st.altair_chart(fires_per_year(incendios))
+    st.altair_chart(previous_ndvi(incendios_ndvi_previo))
 
 
-
-
-
-
-# Filter the data
-filtered_gdp_df = gdp_df[
-    (gdp_df['Country Code'].isin(selected_countries))
-    & (gdp_df['Year'] <= to_year)
-    & (from_year <= gdp_df['Year'])
-]
-
-st.header('GDP over time', divider='gray')
-
-''
-
-st.line_chart(
-    filtered_gdp_df,
-    x='Year',
-    y='GDP',
-    color='Country Code',
-)
-
-''
-''
-
-
-first_year = gdp_df[gdp_df['Year'] == from_year]
-last_year = gdp_df[gdp_df['Year'] == to_year]
-
-st.header(f'GDP in {to_year}', divider='gray')
-
-''
-
-cols = st.columns(4)
-
-for i, country in enumerate(selected_countries):
-    col = cols[i % len(cols)]
-
-    with col:
-        first_gdp = first_year[first_year['Country Code'] == country]['GDP'].iat[0] / 1000000000
-        last_gdp = last_year[last_year['Country Code'] == country]['GDP'].iat[0] / 1000000000
-
-        if math.isnan(first_gdp):
-            growth = 'n/a'
-            delta_color = 'off'
-        else:
-            growth = f'{last_gdp / first_gdp:,.2f}x'
-            delta_color = 'normal'
-
-        st.metric(
-            label=f'{country} GDP',
-            value=f'{last_gdp:,.0f}B',
-            delta=growth,
-            delta_color=delta_color
-        )

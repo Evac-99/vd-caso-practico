@@ -1,0 +1,31 @@
+,contaminante,min,max,color,label
+0,NO2,0,40,lightblue,Buena
+1,NO2,40,80,lightgreen,Razonablemente buena
+2,NO2,80,120,yellow,Regular
+3,NO2,120,230,orange,Desfavorable
+4,NO2,230,340,lightcoral,Muy desfavorable
+5,NO2,340,1000,violet,Extremadamente desfavorable
+6,SO2,0,100,lightblue,Buena
+7,SO2,100,200,lightgreen,Razonablemente buena
+8,SO2,200,350,yellow,Regular
+9,SO2,350,500,orange,Desfavorable
+10,SO2,500,750,lightcoral,Muy desfavorable
+11,SO2,750,1250,violet,Extremadamente desfavorable
+12,O3,0,50,lightblue,Buena
+13,O3,50,100,lightgreen,Razonablemente buena
+14,O3,100,130,yellow,Regular
+15,O3,130,240,orange,Desfavorable
+16,O3,240,380,lightcoral,Muy desfavorable
+17,O3,380,800,violet,Extremadamente desfavorable
+18,PM25,0,10,lightblue,Buena
+19,PM25,10,20,lightgreen,Razonablemente buena
+20,PM25,20,25,yellow,Regular
+21,PM25,25,50,orange,Desfavorable
+22,PM25,50,75,lightcoral,Muy desfavorable
+23,PM25,75,800,violet,Extremadamente desfavorable
+24,PM10,0,20,lightblue,Buena
+25,PM10,20,40,lightgreen,Razonablemente buena
+26,PM10,40,50,yellow,Regular
+27,PM10,50,100,orange,Desfavorable
+28,PM10,100,150,lightcoral,Muy desfavorable
+29,PM10,150,1200,violet,Extremadamente desfavorable
