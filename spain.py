@@ -33,14 +33,14 @@ def fires_per_reg_barchart(input_df):
     chart = alt.Chart(data).transform_aggregate(
         total='sum(total)',
         groupby=['comunidad']
-    ).mark_bar().encode(
-        x=alt.X('comunidad:N', sort='-y', title='Comunidad Autónoma', axis=alt.Axis(labelAngle=-30)),
+    ).mark_bar(color=colores[0]).encode(
+        x=alt.X('comunidad:N', sort='-y', title='Comunidad Autónoma', axis=alt.Axis(labelAngle=-90, labelLimit=0)),
         y=alt.Y('total:Q', title='Número total de incendios'),
-        tooltip=['total']
+        tooltip=[
+            alt.Tooltip("total", title="Nº incendios")  
+        ]
     ).properties(
-        width=800,
-        height=500,
-        title='Número total de incendios por Comunidad Autónoma'
+        height=500
     )
     return chart
 
@@ -67,20 +67,33 @@ def fires_per_5year(input_df):
         x=alt.X('rango_5_anios:O', title='Rango de años')
     )
 
-    bar = base.mark_bar(color='#6BAED6').encode(
-        y=alt.Y('count:Q', title='Número de hectáreas quemadas')
+    bar = base.mark_bar().transform_calculate(Variable = '"NDVI"').encode(
+        y=alt.Y('count:Q', title='Número de hectáreas quemadas'),
+        color=alt.Color('Variable:N', scale=alt.Scale(range=colores_reversed))
     )
 
-    line = base.mark_line(color='purple', strokeWidth=3).encode(
-        y=alt.Y('total:Q', title='Número total de incendios')
+    line = base.mark_line(strokeWidth=3, point=alt.OverlayMarkDef(filled=False, fill="white")).transform_calculate(Variable = '"Número de incendios"').encode(
+        y=alt.Y('total:Q', title='Número de incendios'),
+        color=alt.Color('Variable:N', scale=alt.Scale(range=colores_reversed))
     )
 
-    chart = alt.layer(bar, line).resolve_scale(
+    hover = alt.selection_point(
+        fields=["rango_5_anios"], nearest=False, on="pointermove", empty="none"
+    )
+
+    selector = base.mark_rect(opacity=0).encode(
+        opacity=alt.value(0),
+        tooltip=[
+            alt.Tooltip('rango_5_anios:O', title='Rango años'),
+            alt.Tooltip('count:Q', title='Hectáreas quemadas'),
+            alt.Tooltip('total:Q', title='Número de incendios')
+        ]
+    ).add_params(hover)
+
+    chart = alt.layer(bar, line, selector).resolve_scale(
         y='independent'
     ).properties(
-        width=800,
-        height=500,
-        title='Superficie total perdida y número de incendios por rango de 5 años'
+        height=500
     )
 
     return chart
@@ -96,12 +109,12 @@ def fires_per_year(input_df):
         x=alt.X('anio:O', title='Año')
     )
 
-    numero = base.mark_bar(color='#6BAED6').encode(
+    numero = base.mark_bar(color=colores[0]).encode(
         y=alt.Y('count:Q', title='Número total de incendios')
     ).properties(height=250, width=800)
 
 
-    ha = base.mark_bar(color='purple',strokeWidth=3).encode(
+    ha = base.mark_bar(color=colores[1],strokeWidth=3).encode(
         y=alt.Y('total:Q', title='Número de hectáreas quemadas')
     ).properties(height=250)
 
@@ -113,17 +126,17 @@ def fires_per_year(input_df):
         opacity=alt.value(0),
         tooltip=[
             alt.Tooltip('anio:O', title='Año'),
-            alt.Tooltip('count:Q', title='Hectáreas quemadas'),
-            alt.Tooltip('total:Q', title='Número de incendios')
+            alt.Tooltip('count:Q', title='Número de incendios'),
+            alt.Tooltip('total:Q', title='Hectáreas quemadas')
         ]
-    ).add_params(hover).add_params(hover)
+    ).add_params(hover)
 
-    points_numero = base.mark_point(color='#F58518').encode(
-        y=alt.Y('count:Q', axis=None),
+    points_numero = base.mark_point(color=colores[0]).encode(
+        y=alt.Y('count:Q'),
         opacity=alt.condition(hover, alt.value(1), alt.value(0))
     )
-    points_ha = base.mark_point(color='#F58518').encode(
-        y=alt.Y('total:Q', axis=None),
+    points_ha = base.mark_point(color= colores[1]).encode(
+        y=alt.Y('total:Q'),
         opacity=alt.condition(hover, alt.value(1), alt.value(0))
     )
     rule = base.mark_rule(color='gray').encode(
@@ -138,8 +151,6 @@ def fires_per_year(input_df):
     ).resolve_scale(
         x='shared',
         y='independent'
-    ).properties(
-        title='Superficie total perdida y número de incendios por año'
     )
     return chart
 
@@ -157,7 +168,7 @@ def bubbles(input_df):
     bubbles = base.mark_circle(opacity=0.75).encode(
         x=alt.X('ndvi:Q', title='NVDI'),
         y=alt.Y('total_incendios:Q', title='Número total de incendios'),
-        size=alt.Size('total_hectareas:Q', title='Hectáreas quemadas', scale=alt.Scale(range=[300, 5000])),
+        size=alt.Size('total_hectareas:Q', title='Hectáreas quemadas', legend=None, scale=alt.Scale(range=[200, 4500])),
         color=alt.Color('comunidad_y:N', title='Comunidad', scale=alt.Scale(scheme='category20')),
         tooltip=[
             alt.Tooltip('comunidad_y:N', title='Comunidad'),
@@ -175,36 +186,91 @@ def bubbles(input_df):
         y='incendios_boost:Q'
     )
 
-    chart = (bubbles + dummies).properties(width=800, height=600)
+    chart = (bubbles + dummies).properties(
+        height=500,     
+        title=alt.TitleParams(
+            '*Tamaño de las burbujas determinado por el número de hectáreas quedadas',
+            color='darkgray',
+            baseline='bottom',
+            orient='bottom',
+            anchor='end', 
+            fontWeight = 'normal'
+        )
+)
     return chart    
 
 
 def serious_fires_ndvi(ndvi, fires):
-    chart_incendios = alt.Chart(fires[fires.perdidassuperficiales > 500]).mark_line(color='orange').encode(
-    x=alt.X('mesdeteccion:O', sort=meses_ordenados, title='Mes'),
-    y=alt.Y('count():Q', title='Número de incendios graves'),
-    tooltip=['mesdeteccion', 'count()']
+    selector = alt.selection_point(
+        fields=["mesdeteccion"], 
+        nearest=True, 
+        on="mouseover", 
+        empty="none"
     )
 
-    chart_ndvi = alt.Chart(ndvi).mark_line(color='green').encode(
-        x=alt.X('mesdeteccion:O', sort=meses_ordenados, title='Mes'),
-        y=alt.Y('NDVI:Q', title='NDVI'),
-        tooltip=['mesdeteccion', 'NDVI']
+    chart_incendios = (
+        alt.Chart(fires[fires.perdidassuperficiales > 500])
+        .transform_calculate(Variable = '"Número de incendios"')
+        .mark_line(strokeWidth=3,point=alt.OverlayMarkDef(filled=False, fill="white"))
+        .encode(
+            x=alt.X("mesdeteccion:O", sort=meses_ordenados, title="Mes"),
+            y=alt.Y("count():Q", title="Número de incendios graves"), 
+            color=alt.Color('Variable:N', scale=alt.Scale(range=colores_reversed))
+        )
+    )
+
+    chart_ndvi = (
+        alt.Chart(ndvi) 
+        .transform_calculate(Variable = '"NDVI"')
+        .mark_line(strokeWidth=3,point=alt.OverlayMarkDef(filled=False, fill="white"))
+        .encode(
+            x=alt.X("mesdeteccion:O", sort=meses_ordenados, title="Mes"),
+            y=alt.Y("NDVI:Q", title="NDVI"),
+            color = alt.Color('Variable:N', scale=alt.Scale(range=colores_reversed))
+        )
+    )
+
+    puntos = (
+        alt.Chart(fires[fires.perdidassuperficiales > 500].merge(ndvi, on="mesdeteccion"))
+        .mark_circle(size=0, opacity=0) 
+        .encode(
+            x=alt.X("mesdeteccion:O", sort=meses_ordenados),
+            tooltip=[
+                alt.Tooltip("mesdeteccion:O", title="Mes"),
+                alt.Tooltip("count():Q", title="Incendios graves"),
+                alt.Tooltip("NDVI:Q", title="NDVI")
+            ]
+        )
+        .add_params(selector)
     )
 
     combined_chart = alt.layer(
         chart_incendios,
-        chart_ndvi
+        chart_ndvi,
+        puntos
     ).resolve_scale(
-        x='shared',
-        y='independent'
+        x="shared",
+        y="independent"
     ).properties(
-        width=800,
-        height=500,
-        title='Relación entre incendios graves y NDVI medio mensual'
+        height=500, 
+        title=alt.TitleParams(
+            '*El filtrado de años no aplica a este gráfico',
+            color='darkgray',
+            baseline='bottom',
+            orient='bottom',
+            anchor='end', 
+            fontWeight = 'normal'
+        )
+    ).configure_legend(
+        titleFontSize=14,
+        labelFontSize=12,
+        orient='bottom'
     )
 
+
     return combined_chart
+
+
 
 def previous_ndvi(input_df):
     data = input_df[(input_df.anio >= from_year) & (input_df.anio <= to_year)].groupby(["fortnight", "anio", "provincia"]).agg({
@@ -226,15 +292,11 @@ def previous_ndvi(input_df):
         color=alt.Color('NDVI_previo_mean:Q', title='NDVI medio', scale=alt.Scale(scheme='viridis')),
         tooltip=[
             alt.Tooltip('provincia:N', title='Comunidad'),
-            alt.Tooltip('n_incendios:Q'),
-            alt.Tooltip('perdidassuperficiales_sum:Q'),
-            alt.Tooltip('NDVI_previo_mean:Q')
+            alt.Tooltip('n_incendios:Q', title='Nº incendios'),
+            alt.Tooltip('perdidassuperficiales_sum:Q', title= 'Hectáreas quemadas'),
+            alt.Tooltip('NDVI_previo_mean:Q', title= 'NDVI previo')
         ]
-    ).properties(
-        width=700,
-        height=500,
-        title='Relación entre incendios, hectáreas quemadas y NDVI por comunidad y año'
-    )
+    ).properties(height=500)
 
     return scatter
 
@@ -244,9 +306,9 @@ incendios_ndvi = get_data_from_csv('data/merged_data.csv')
 ndvi_mensual = get_data_from_csv('data/NDVI_mensual.csv' )
 incendios_ndvi_previo = get_data_from_csv('data/NDVI_previo_incendios.csv')
 
-meses_ordenados = ['enero', 'febrero', 'marzo', 'abril', 'mayo',
-                   'junio', 'julio', 'agosto', 'septiembre', 'octubre',
-                   'noviembre', 'diciembre']
+colores = ["#CA694B","#88BB75"]
+colores_reversed = ["#88BB75","#CA694B"]
+meses_ordenados = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
 
 with st.sidebar: 
     st.title("Filtros")
@@ -257,7 +319,8 @@ with st.sidebar:
         'Ano ',
         min_value=min_value,
         max_value=max_value,
-        value=[min_value, max_value])
+        value=[min_value, max_value]
+    )
 
 # -----------------------------------------------------------------------------
 # Draw the actual page
@@ -267,22 +330,42 @@ with st.sidebar:
 # Dashboard incendios España
 '''
 
-# Add some spacing
-''
-''
+st.markdown("# Incidencios por comunidad autónoma")
 
-col = st.columns((1, 1), gap='medium')
+row1 = st.columns((1, 1), gap='large')
+with row1[0]:
+    st.subheader("Número de incendios")
+    st.altair_chart(fires_per_reg_barchart(incendios), use_container_width=True)
+
+with row1[1]:
+    st.subheader("Número de incendios y hectareas quemadas")
+    st.altair_chart(bubbles(incendios_ndvi), use_container_width=True)
+
+st.divider()
+st.markdown("## 📆 Ha quemadas y número de incendios anuales")
+
+row2 = st.columns((1, 1), gap='large')
+
+if row2[0].button("Rangos de 5 años", width="stretch"):
+    st.altair_chart(fires_per_5year(incendios), use_container_width=True)
+
+if row2[1].button("Anual", width="stretch"):
+    st.altair_chart(fires_per_year(incendios), use_container_width=True)
 
 
 
-with col[0]:
-    st.altair_chart(fires_per_reg_barchart(incendios))
-    st.altair_chart(bubbles(incendios_ndvi))
-    st.altair_chart(serious_fires_ndvi(ndvi_mensual, incendios))
 
-with col[1]:    
-    st.altair_chart(fires_per_5year(incendios))
-    st.altair_chart(fires_per_year(incendios))
-    st.altair_chart(previous_ndvi(incendios_ndvi_previo))
+st.divider()
+st.markdown("## NDVI medio y previo")
+
+row3 = st.columns((1, 1), gap='large')
 
 
+with row3[0]:
+    st.subheader("NDVI medio mensual y número de grandes incendios forestales")
+    st.altair_chart(serious_fires_ndvi(ndvi_mensual, incendios), use_container_width=True)
+
+
+with row3[1]:
+    st.subheader("Relación NDVI previo a los incendios con el número de incendios y su severidad")
+    st.altair_chart(previous_ndvi(incendios_ndvi_previo), use_container_width=True)
