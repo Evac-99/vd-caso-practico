@@ -330,7 +330,7 @@ with st.sidebar:
 # Dashboard incendios España
 '''
 
-st.markdown("# Incidencios por comunidad autónoma")
+st.markdown("## Incidencios por comunidad autónoma")
 
 row1 = st.columns((1, 1), gap='large')
 with row1[0]:
@@ -338,11 +338,11 @@ with row1[0]:
     st.altair_chart(fires_per_reg_barchart(incendios), use_container_width=True)
 
 with row1[1]:
-    st.subheader("Número de incendios y hectareas quemadas")
+    st.subheader("NDVI, Número de incendios y hectáreas quemadas")
     st.altair_chart(bubbles(incendios_ndvi), use_container_width=True)
 
 st.divider()
-st.markdown("## 📆 Ha quemadas y número de incendios anuales")
+st.markdown("## 📆 Hectáreas quemadas y número de incendios anuales")
 
 row2 = st.columns((1, 1), gap='large')
 

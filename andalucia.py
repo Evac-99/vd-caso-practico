@@ -144,7 +144,8 @@ def plot_fire_NDVI_monthly(incendios, ndvi):
 
     chart_incendios = (
         alt.Chart(df)
-        .mark_line(color=colores[0],point=alt.OverlayMarkDef(filled=False, fill="white", color = colores[0]))
+        .mark_line(color=colores[0],point=alt.OverlayMarkDef(filled=False, fill="white"))
+        .transform_calculate(Variable = '"Incendios graves"')
         .encode(
             x=alt.X("mesdeteccion:O", sort=meses_ordenados, title="Mes"),
             y=alt.Y("numero:Q", title="Número de incendios graves"),
@@ -152,13 +153,15 @@ def plot_fire_NDVI_monthly(incendios, ndvi):
                 alt.Tooltip("mesdeteccion:O", title="Mes"),
                 alt.Tooltip("numero:Q", title="Incendios graves"),
                 alt.Tooltip("ndvi_mean:Q", title="NDVI")
-            ]
+            ],
+            color=alt.Color('Variable:N', scale=alt.Scale(range=colores))
         )
     )
 
     chart_ndvi = (
         alt.Chart(df)
-        .mark_line(color=colores[1], point=alt.OverlayMarkDef(filled=False, fill="white", color=colores[1]))
+        .mark_line(color=colores[1], point=alt.OverlayMarkDef(filled=False, fill="white"))
+        .transform_calculate(Variable = '"NDVI"')
         .encode(
             x=alt.X("mesdeteccion:O", sort=meses_ordenados, title="Mes"),
             y=alt.Y("ndvi_mean:Q", title="NDVI"), 
@@ -166,7 +169,8 @@ def plot_fire_NDVI_monthly(incendios, ndvi):
                 alt.Tooltip("mesdeteccion:O", title="Mes"),
                 alt.Tooltip("numero:Q", title="Incendios graves"),
                 alt.Tooltip("ndvi_mean:Q", title="NDVI")
-            ]
+            ],
+            color=alt.Color('Variable:N', scale=alt.Scale(range=colores))
         )
     )
 
@@ -176,7 +180,11 @@ def plot_fire_NDVI_monthly(incendios, ndvi):
     ).resolve_scale(
         x='shared',
         y='independent'
-    ).properties(height=500)
+    ).properties(height=500).configure_legend(
+        titleFontSize=14,
+        labelFontSize=12,
+        orient='bottom'
+    )
 
     return combined_chart
 
@@ -193,24 +201,32 @@ def plot_fire_contaminant_monthly(incendios, contaminante, nombre_contaminante):
     df = pd.merge(contaminante, incendios_andalucia_agregado, on="mesdeteccion", how='left')
 
 
-    chart_incendios = alt.Chart(df).mark_line(color=colores[0], point=alt.OverlayMarkDef(filled=False, fill="white", color=colores[0])).encode(
+    chart_incendios = alt.Chart(df).mark_line( point=alt.OverlayMarkDef(filled=False, fill="white")
+        ).transform_calculate(
+            Variable = '"Incendios graves"'
+        ).encode(
         x=alt.X('mesdeteccion:O', sort=meses_ordenados, title='Mes'),
         y=alt.Y('numero:Q', title='Número de incendios graves'),
         tooltip=[
                 alt.Tooltip("mesdeteccion:O", title="Mes"),
                 alt.Tooltip("numero:Q", title="Incendios graves"),
                 alt.Tooltip("VALOR_FINAL:Q", title="NDVI")
-            ]  
+            ],
+            color=alt.Color('Variable:N', scale=alt.Scale(range=colores)) 
     )
 
-    chart_ndvi = alt.Chart(df).mark_line(color=colores[1], point=alt.OverlayMarkDef(filled=False, fill="white", color=colores[1])).encode(
+    chart_ndvi = alt.Chart(df).mark_line(point=alt.OverlayMarkDef(filled=False, fill="white")
+        ).transform_calculate(
+            Variable = f'"{nombre_contaminante}"'
+        ).encode(
         x=alt.X('mesdeteccion:N', sort=meses_ordenados, title='Mes'),
         y=alt.Y('VALOR_FINAL:Q', title=format_nombre_contaminante(nombre_contaminante)),
         tooltip=[
                 alt.Tooltip("mesdeteccion:O", title="Mes"),
                 alt.Tooltip("numero:Q", title="Incendios graves"),
                 alt.Tooltip("VALOR_FINAL:Q", title="NDVI")
-            ]
+            ],
+        color=alt.Color('Variable:N', scale=alt.Scale(range=colores))
     )
 
 
@@ -220,7 +236,12 @@ def plot_fire_contaminant_monthly(incendios, contaminante, nombre_contaminante):
     ).resolve_scale(
         x='shared',
         y='independent'
-    ).properties(height=500)
+    ).properties(height=500).configure_legend(
+        titleFontSize=14,
+        labelFontSize=12,
+        orient='bottom'
+    )
+
 
     return combined_chart
 
